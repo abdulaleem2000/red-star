@@ -1,0 +1,117 @@
+@import "../mixins.scss";
+
+.hero {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__container {
+    position: relative;
+    //padding-right: 20px; // Add some space between the image and text
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute; // Take up half of the container's width
+    top: 10%;
+    padding: 30px; // Adjust padding as needed
+    width: 60%;
+    h1 {
+      color: white;
+      font-weight: 500;
+      font-size: 63px;
+      line-height: 80px;
+      @include respond(tab-land) {
+        font-size: 40px;
+        line-height: 50px;
+        top: 5%;
+        margin-top: 5px;
+      }
+
+      @include respond(tab-port) {
+        font-size: 30px;
+        line-height: 40px;
+        top: 5%;
+        margin-top: 5px;
+      }
+
+      @include respond(phone) {
+        font-size: 19px;
+        line-height: 20px;
+        top: 5%;
+        margin-top: 5px;
+      }
+    }
+
+    h3 {
+      width: 60%;
+      color: white;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
+      @include respond(tab-port) {
+        font-size: 20px;
+        line-height: 20px;
+        top: 5%;
+        margin-top: 5px;
+      }
+
+      @include respond(phone) {
+        font-size: 10px;
+        line-height: 10px;
+        width: 80%;
+        top: 5%;
+        margin-top: 5px;
+      }
+    }
+    @include respond(tab-land) {
+      top: 1%;
+      width: 70%;
+      padding: 10px;
+    }
+
+    @include respond(tab-port) {
+      top: 1%;
+      width: 70%;
+      padding: 10px;
+    }
+
+    @include respond(phone) {
+      top: 1%;
+      width: 70%;
+      padding: 10px;
+    }
+  }
+
+  img {
+    max-width: 100%; // Make sure the image doesn't overflow its container
+    height: auto; // Maintain aspect ratio
+  }
+
+  &__btn {
+    margin-top: 50px;
+    //display: block;
+    a {
+      .white-button {
+        color: white;
+        border-color: white;
+
+        &:hover {
+          border-color: var(--primary-color);
+        }
+      }
+    }
+    @include respond(tab-land) {
+      margin-top: 10px;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 10px;
+    }
+    @include respond(phone) {
+      margin-top: 10px;
+    }
+  }
+}

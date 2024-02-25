@@ -1,0 +1,135 @@
+@import "../mixins.scss";
+
+.pos {
+  .pos-para {
+    font-weight: 400;
+    font-size: 19px;
+  }
+
+  &__cont-image {
+    position: relative;
+    margin-top: 30px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      //   @include respond(tab-port) {
+      //     flex-direction: column;
+      //   }
+    }
+
+    .image-column,
+    .content-column {
+      padding: -10px;
+    }
+
+    .image-column img {
+      width: 100%;
+      margin-right: 500px;
+      height: auto;
+    }
+
+    .content-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+      h1 {
+        color: white;
+        font-weight: 600;
+        font-size: 29.25px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 40px;
+        color: white;
+      }
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+    .posb {
+      border-color: white;
+      color: white;
+      margin-right: 400px;
+
+      &:hover {
+        border-color: var(--primary-color);
+        background-color: white;
+        color: var(--primary-color);
+      }
+    }
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  //phone
+  .pos__cont-image-phone {
+    display: none;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 40%;
+      display: block;
+    }
+
+    .overlay-content-phone {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      //   background-color: rgba(
+      //     0,
+      //     0,
+      //     0,
+      //     0.5
+      //   ); /* Example background color for overlay */
+      color: white; /* Example text color for overlay */
+    }
+
+    .content-column-phone {
+      margin-top: 20px; /* Adjust spacing between image and paragraph */
+      text-align: center;
+    }
+
+    // .button {
+    //   margin-top: 20px; /* Adjust spacing between paragraph and button */
+    // }
+    .posb-phone {
+      border-color: white;
+      color: white;
+      //margin-right: 400px;
+
+      &:hover {
+        border-color: var(--primary-color);
+        background-color: white;
+        color: var(--primary-color);
+      }
+    }
+
+    @include respond(tab-land) {
+      display: block;
+    }
+  }
+}

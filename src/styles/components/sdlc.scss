@@ -1,0 +1,13 @@
+@import "../mixins.scss";
+
+.sdlc {
+  margin-top: 100px;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 80%;
+    }
+  }
+}

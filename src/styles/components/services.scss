@@ -1,0 +1,68 @@
+@import "../mixins.scss";
+
+.services {
+  margin-top: 200px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    .header-text {
+      width: 70%;
+
+      .header-head {
+        color: var(--primary-color);
+        font-weight: 500;
+        font-size: 22px;
+        @include respond(tab-port) {
+          font-size: 14px;
+        }
+      }
+
+      h2 {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 48px;
+        width: 60%;
+
+        @include respond(tab-port) {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond(tab-land) {
+    margin-top: 150px;
+  }
+  .header-para {
+    width: 70%;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--gray-color);
+    letter-spacing: 0.2px;
+    @include respond(phone) {
+      font-weight: 500;
+      font-size: 12px;
+      width: 100%;
+    }
+  }
+
+  &__types {
+    .row1 {
+      .type {
+        display: flex;
+
+        @include respond(tab-land) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
